@@ -1,5 +1,5 @@
 <?php
-include('../partials/header.php');
+include('../template/partials/header.php');
 ?> 
     <div class="spacer"></div>
     <section id="footwear">
