@@ -1,8 +1,8 @@
 <?php
-    define('DATABASE', [
-        'HOST' => 'localhost',
-        'DBNAME' => 'zv_project_php',
-        'USER_NAME' => 'root',
-        'PASSWORD' => ''
-    ]);
+    $dbhost = "localhost";
+    $dbname = "project.shop";
+    $username = "root";
+    $password = "";
+
+    $db = new PDO("mysql:host=$dbhost; dbname=$dbname", $username, $password);
 ?>

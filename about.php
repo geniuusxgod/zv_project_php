@@ -1,13 +1,12 @@
 <?php
-include('../template/partials/header.php');
-?> 
+        include_once('templates/partials/header.php');
+    ?>
     <div class="spacer"></div>
     
     <?php
-        include("../template/partials/about-container.php");
+        include('templates/partials/about-content.php');
     ?>
     
     <?php
-include('../partials/footer.php');
-?> 
-    
+        include_once('templates/partials/footer.php');
+    ?>

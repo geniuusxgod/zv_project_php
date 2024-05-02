@@ -1,5 +1,5 @@
 <?php
-  require('../_inc/functions.php');
+  require_once('_inc/functions.php');
 ?>
 <footer>
         <ul class="navlist-down">

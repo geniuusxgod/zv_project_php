@@ -1,6 +1,6 @@
 <?php
-include('../template/partials/header.php');
-?> 
+        include('templates/partials/header.php');
+    ?>
     <div class="spacer"></div>    
     <main>
         <div class="container mt-5">
@@ -70,5 +70,5 @@ include('../template/partials/header.php');
         </div>
     </main>
     <?php
-include('../partials/footer.php');
-?>     
+        include('templates/partials/footer.php');
+    ?>
