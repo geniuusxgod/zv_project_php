@@ -1,4 +1,4 @@
-/** {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -124,11 +124,13 @@ header {
     margin-bottom: 10px;    
 }
 
-*/
+
 .product .image-product img {
-    border: 2px solid red; /* Проверка: граница красного цвета */
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
 }
-/*.image-product a.img6:hover{
+.image-product a.img6:hover{
     display: block; 
     background-image: url('/img/products/jackets/pr6_back.webp');
     background-size: contain; 

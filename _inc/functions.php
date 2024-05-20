@@ -94,6 +94,16 @@
         };
         
     }
+    function get_abouts_all(){
+        global $db;
+        $abouts = $db->query("SELECT * FROM about");
+        return $abouts;
+    }
+    function get_images_all(){
+        global $db;
+        $images = $db->query("SELECT * FROM slider");
+        return $images;
+    }
 
     function get_products_all(){
         global $db;
@@ -106,4 +116,78 @@
         $products = $db->query("SELECT * FROM products ORDER BY RAND() LIMIT 6");
         return $products;
     }
+
+
+    function display_products_by_category($category_id) {
+        $products = get_products_all()->fetchAll();
+        $count = 0;
+    
+        $output = '<div class="container mt-5"><div class="row text-center">';
+    
+        foreach ($products as $product) {
+            if (isset($product["category_id"]) && $product["category_id"] == $category_id) {
+                $output .= '<div class="col-md-4"><div class="product"><a href="#"><div class="image-product">';
+                $output .= '<img src="' . $product['img'] . '" alt="' . $product["product_name"] . '">';
+                $output .= '</div></a><div class="info"><h2>' . $product["product_name"] . '</h2>';
+                $output .= '<h3>' . $product["price"] . '<small>$</small></h3></div></div></div>';
+                $count++;
+    
+                if ($count % 3 == 0) {
+                    $output .= '</div><div class="row text-center">';
+                }
+            }
+        }
+    
+        $output .= '</div></div>';
+    
+        return $output;
+    }
+
+    function display_random_products() {
+        $products = get_products_random()->fetchAll();
+        $output = '';
+    
+        foreach ($products as $product) {
+            $output .= '<div class="col-md-6">';
+            $output .= '<div class="product">';
+            $output .= '<a href="#"><div class="image-product">';
+            $output .= '<img src="' . $product['img'] . '" alt="' . $product["product_name"] . '" style="max-width: 100%; height: auto; max-height: 400px;">';
+            $output .= '</div></a>';
+            $output .= '<div class="info">';
+            $output .= '<h2>' . $product["product_name"] . '</h2>';
+            $output .= '<h3>' . $product["price"] . '<small>$</small></h3>';
+            $output .= '</div>';
+            $output .= '</div>';
+            $output .= '</div>';
+        }
+    
+        return $output;
+    }
+
+    function slider(){
+        $images = get_images_all()->fetchAll();
+        $output = '';
+        foreach($images as $image){
+            $output .= '<img src="'.$image['url'] . '" alt="' . $image["image"] . '" >';
+        }
+
+        return $output;
+    }
+
+    function about(){
+        $abouts = get_abouts_all()->fetchAll();
+        
+        $output = '<div class="about-container">';
+        $output .= '<h1>Welcome to 0P1UM ST0R3</h1>';
+        foreach($abouts as $about){
+            $output .= '<h2 class="h2" onclick="toggleAccordion(this)">'.$about['theme'].'</h2>';
+            $output .= '<div class="h2text">';
+            $output .= '<p>'.$about['text'].'</p>';
+            $output .= '</div>';
+        }
+        $output .= '</div>';
+
+        return $output;
+    }
 ?>
+

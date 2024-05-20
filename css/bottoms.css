@@ -125,125 +125,19 @@ header {
 }
 
 
-.image-product a.img1{
-    display: block; 
-    background-image: url('/img/products/bottoms/j1.webp');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}   
-.image-product a.img1:hover{
-    display: block; 
-    background-image: url('/img/products/bottoms/j1_back.webp');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
+.product .image-product img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
 }
-.image-product a.img2{
-    display: block; 
-    background-image: url('/img/products/bottoms/j2.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}   
-.image-product a.img2:hover{
-    display: block; 
-    background-image: url('/img/products/bottoms/j2_back.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}
-.image-product a.img3{
-    display: block; 
-    background-image: url('/img/products/bottoms/j3.webp');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}   
-.image-product a.img3:hover{
-    display: block; 
-    background-image: url('/img/products/bottoms/j3_back.webp');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}
-.image-product a.img4{
-    display: block; 
-    background-image: url('/img/products/bottoms/j4.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}   
-.image-product a.img4:hover{
-    display: block; 
-    background-image: url('/img/products/bottoms/j4_back.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}
-.image-product a.img5{
-    display: block; 
-    background-image: url('/img/products/bottoms/j5.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}   
-.image-product a.img5:hover{
-    display: block; 
-    background-image: url('/img/products/bottoms/j5_back.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}
-.image-product a.img6{
-    display: block; 
-    background-image: url('/img/products/bottoms/j6.jpg');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 400px;
-    width: auto;
-    border-radius: 50px;
-}   
 .image-product a.img6:hover{
     display: block; 
-    background-image: url('/img/products/bottoms/j6_back.jpg');
+    background-image: url('/img/products/jackets/pr6_back.webp');
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center; 
     height: 400px;
     width: auto;
-    border-radius: 50px;
 }
 .info {
     text-align: center;

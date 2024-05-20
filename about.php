@@ -3,9 +3,12 @@
     ?>
     <div class="spacer"></div>
     
+    <section id="about">
     <?php
-        include('templates/partials/about-content.php');
+        echo about();
     ?>
+
+    </section>
     
     <?php
         include_once('templates/partials/footer.php');
