@@ -8,6 +8,10 @@
         private $password = '';
     
         protected $connection;
+        
+        public function __construct() {
+            $this->connection = $this->db_connection();
+        }
        
         protected function db_connection(){
             try {
@@ -22,6 +26,9 @@
             }catch(PDOException $e){
                 die("Chyba pripojenia k databáze: " . $e->getMessage());
             }
+        }
+        public function getConnection() {
+            return $this->connection;
         }
     }
 

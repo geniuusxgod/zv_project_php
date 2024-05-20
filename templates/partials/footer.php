@@ -2,14 +2,18 @@
   require_once('_inc/functions.php');
 ?>
 <footer>
-    <ul class="navlist-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./jackets.html">Jackets</a></li>
-        <li><a href="./bottoms.html">Bottoms</a></li>
-        <li><a href="./hoodies.html">Hoodies</a></li>
-        <li><a href="./footwear.html">Footwear</a></li>
-    </ul>
+<?php
+           $pages = array('Home'=>'home.php',
+           'About'=>'about.php',
+           'Jackets'=>'jackets.php',
+           'Bottoms'=>'bottoms.php',
+           'Hoodies'=>'hoodies.php',
+           'Footwear'=>'footwear.php'  
+      );
+      //echo(generate_menu($pages));
+      $menu_object = new Menu($pages);
+      echo($menu_object->generate_menu());
+        ?>
     <div class="logo">
         <a href="#"><img src="img/logo/logo.svg"></a>
     </div>
@@ -26,7 +30,9 @@
     
 </footer>   
     <?php
-        add_scripts();
+        $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+        $page_object = new Page($page_name);
+        $page_object->add_scripts();
     ?>
      
     

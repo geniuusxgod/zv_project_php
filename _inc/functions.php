@@ -1,9 +1,10 @@
 <?php
     require('config.php');
 
+    
 
 
-
+    //add styles to pages
     function add_stylesheets(){
         echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">';
         echo '<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">';
@@ -76,6 +77,9 @@
                 break;
         }
     }
+    
+
+    //add scripts to pages
     function add_scripts(){
         echo('<script src="js/hamburger.js"></script>');
         echo('<script src="js/sign-in.js"></script>');
@@ -94,30 +98,37 @@
         };
         
     }
+
+    //get all in table about
     function get_abouts_all(){
         global $db;
         $abouts = $db->query("SELECT * FROM about");
         return $abouts;
     }
+
+    //get all in table slider
     function get_images_all(){
         global $db;
         $images = $db->query("SELECT * FROM slider");
         return $images;
     }
 
+    //get all in table products
     function get_products_all(){
         global $db;
         $products = $db->query("SELECT * FROM products");
         return $products;
     }
 
+
+    //get 6 randoms products in table product
     function get_products_random(){
         global $db;
         $products = $db->query("SELECT * FROM products ORDER BY RAND() LIMIT 6");
         return $products;
     }
 
-
+    //display products by category_id
     function display_products_by_category($category_id) {
         $products = get_products_all()->fetchAll();
         $count = 0;
@@ -143,6 +154,7 @@
         return $output;
     }
 
+    //display random products
     function display_random_products() {
         $products = get_products_random()->fetchAll();
         $output = '';
@@ -164,6 +176,7 @@
         return $output;
     }
 
+    //slider function
     function slider(){
         $images = get_images_all()->fetchAll();
         $output = '';
@@ -174,6 +187,8 @@
         return $output;
     }
 
+
+    //about function
     function about(){
         $abouts = get_abouts_all()->fetchAll();
         
@@ -189,5 +204,21 @@
 
         return $output;
     }
+
+    //generate menu
+    function generate_menu(array $pages): string{
+        $menuItems = '<ul class="navlist">'; 
+        
+        
+        foreach($pages as $page_name => $page_url){
+            
+            $menuItems .= '<li><a href="' . $page_url . '">' . $page_name . '</a></li>';
+        }
+    
+        $menuItems .= '</ul>';
+        return $menuItems;
+    }
 ?>
+
+
 

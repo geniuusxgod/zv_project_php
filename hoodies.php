@@ -9,7 +9,8 @@
         <div class="container mt-5">
             <div class="row text-center">
             <?php
-                echo display_products_by_category(3);
+                $jackets = new Categories();
+                echo ($jackets->display_products_by_category(3));
             ?>
         </div>
     </div>

@@ -69,11 +69,17 @@ header {
 
 .navlist {
     display: flex;
+    justify-content: center; 
+    list-style-type: none; 
+    padding: 0; 
 }
 
-.navlist a {
+.navlist li {
+    margin-left: 60px; 
+}
+
+.navlist li a {
     color: black;
-    margin-left: 60px;
     font-size: 15px;
     font-weight: 600;
     border-bottom: 2px solid transparent;

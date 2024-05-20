@@ -10,7 +10,8 @@
         <div class="container-image">
             <div class="image">
                 <?php
-                    echo slider();
+                    $slider = new Home();
+                    echo($slider->slider());
                 ?>
             </div>
         </div>
@@ -23,7 +24,8 @@
         <div class="container mt-5">
             <div class="row text-center">
             <?php
-                echo display_random_products();
+                $random = new Home();
+                echo($random->display_random_products());
             ?>
         </div>
     </div>

@@ -5,7 +5,8 @@
     
     <section id="about">
     <?php
-        echo about();
+        $about = new About();
+        echo($about->about());
     ?>
 
     </section>
