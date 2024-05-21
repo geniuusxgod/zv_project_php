@@ -55,7 +55,7 @@
                 case 'j1':
                     echo '<link rel="stylesheet" href="cs/j.css">';
                     break;
-                case 'j2':
+                case 'product_detail':
                     echo '<link rel="stylesheet" href="cs/j.css">';
                     break;
                 case 'j3':

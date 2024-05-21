@@ -18,5 +18,6 @@ require_once('classes/About.php');
 require_once('classes/Page.php');
 require_once('classes/Home.php');
 require_once('classes/Categories.php');
+require_once('classes/Product.php');
 session_start();
 ?>

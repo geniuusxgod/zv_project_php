@@ -218,6 +218,33 @@
         $menuItems .= '</ul>';
         return $menuItems;
     }
+
+    
+    function get_product($pr){
+        $products = get_products_all()->fetchAll();
+        foreach ($products as $product) {
+            if (isset($product["product_id"]) && $product["product_id"] == $pr) {
+                // HTML-разметка для отображения информации о продукте
+                $output = '<div class="row">';
+                $output .= '<div class="col-md-6">';
+                $output .= '<img src="' . $product['img'] . '" alt="' . $product['product_name'] . '">';
+                $output .= '</div>';
+                $output .= '<div class="col-md-6">';
+                $output .= '<div class="text-container">';
+                $output .= '<div class="product-name"><h1>' . $product['product_name'] . '</h1></div>';
+                $output .= '<div class="cena"><p>' . $product['price'] . '</p></div>';
+                $output .= '<div class="tet"><p>' . $product['description'] . '</p></div>';
+                $output .= '</div>';
+                $output .= '</div>';
+                $output .= '</div>';
+    
+                // Возвращаем HTML-код
+                return $output;
+            }
+        }
+        // Если продукт не найден, возвращаем пустую строку
+        return '';
+    }
 ?>
 
 

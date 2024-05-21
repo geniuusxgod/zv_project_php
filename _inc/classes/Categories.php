@@ -7,7 +7,6 @@
         }
 
         function get_products_all(){
-            global $db;
             $products = $this->db->query("SELECT * FROM products");
             return $products;
         }
