@@ -1,5 +1,6 @@
 <?php
   require_once('_inc/functions.php');
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,8 +60,17 @@
                 'Footwear'=>'footwear.php'  
            );
            //echo(generate_menu($pages));
-           $menu_object = new Menu($pages);
-           echo($menu_object->generate_menu());
+           
+          $menu_object = new Menu($pages);
+          echo($menu_object->generate_menu());
+          if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+            // Пользователь вошел в систему
+            echo '<li><a href="logout.php" class="button">Log out</a></li>';
+          } else {
+            // Пользователь не вошел в систему
+            echo '<li><a href="login.php" class="button login-button">Log in</a></li>';
+            echo '<li><a href="registration.php" class="button">Sign in</a></li>';
+          }
            
         ?>
         

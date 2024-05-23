@@ -22,24 +22,6 @@
                 case 'about':
                     echo '<link rel="stylesheet" href="css/about.css">';
                     break;
-                case 'b1':
-                    echo '<link rel="stylesheet" href="cs/b.css">';
-                    break;
-                case 'b2':
-                    echo '<link rel="stylesheet" href="cs/b.css">';
-                    break;
-                case 'b3':
-                    echo '<link rel="stylesheet" href="cs/b.css">">';
-                    break;
-                case 'b4':
-                    echo '<link rel="stylesheet" href="cs/b.css">';
-                    break;
-                case 'b5':
-                    echo '<link rel="stylesheet" href="cs/b.css">';
-                    break;
-                case 'b6':
-                    echo '<link rel="stylesheet" href="cs/b.css">';
-                    break;
                 case 'bottoms':
                     echo '<link rel="stylesheet" href="css/bottoms.css">';
                     break;
@@ -52,24 +34,6 @@
                 case 'hoodies':
                     echo '<link rel="stylesheet" href="css/hoodies.css">';
                     break;
-                case 'j1':
-                    echo '<link rel="stylesheet" href="cs/j.css">';
-                    break;
-                case 'product_detail':
-                    echo '<link rel="stylesheet" href="cs/j.css">';
-                    break;
-                case 'j3':
-                    echo '<link rel="stylesheet" href="cs/j.css">';
-                    break;
-                case 'j4':
-                    echo '<link rel="stylesheet" href="cs/j.css">';
-                    break;
-                case 'j5':
-                    echo '<link rel="stylesheet" href="cs/j.css">';
-                    break;
-                case 'j6':
-                    echo '<link rel="stylesheet" href="cs/j.css">';
-                    break;
                 case 'jackets':
                     echo '<link rel="stylesheet" href="css/jackets.css">';
                     break;
@@ -79,6 +43,17 @@
                 case 'thankyou':
                     echo '<link rel="stylesheet" href="css/thankyou.css">';
                     break;
+                case 'product_detail':
+                    echo '<link rel="stylesheet" href="cs/b.css">';
+                    break;
+                case 'admin':
+                    echo '<link rel="stylesheet" href="css/admin.css">';
+                    break;
+                case 'contact-update':
+                    echo '<link rel="stylesheet" href="css/contact-update.css">';
+                    break;
+                case 'login':
+                    echo '  <link rel="stylesheet" href="css/registration.css">';
             }
         }
         
