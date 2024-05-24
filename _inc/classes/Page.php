@@ -53,7 +53,11 @@
                     echo '<link rel="stylesheet" href="css/contact-update.css">';
                     break;
                 case 'login':
-                    echo '  <link rel="stylesheet" href="css/registration.css">';
+                    echo '<link rel="stylesheet" href="css/registration.css">';
+                    break;
+                case '404':
+                    echo '<link rel="stylesheet" href="css/admin.css">';
+                    break;
             }
         }
         
